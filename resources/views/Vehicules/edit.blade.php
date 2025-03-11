@@ -20,43 +20,53 @@
       </div>
     
     @endif
-    <form action="creationVehicule" method="POST">
+    <form action="{{route('updateVehicule', $vehicule->id)}}" method="POST">
         @csrf
+        @method('PATCH')
       <div class="mb-3">
         <label for="immatriculation" class="form-label">immatriculation</label>
-        <input type="text" class="form-control" name="immatriculation" id="immatriculation" aria-describedby="emailHelp">
+        <input type="text" class="form-control" name="immatriculation" id="immatriculation" aria-describedby="emailHelp"
+         value="{{ $vehicule->immatriculation }}">
       </div>
       <div class="mb-3">
         <label for="marque" class="form-label">marque</label>
-        <input type="text" class="form-control" name="marque" id="marque" aria-describedby="emailHelp">
+        <input type="text" class="form-control" name="marque" id="marque" aria-describedby="emailHelp" 
+        value="{{ $vehicule->marque }}">
       </div>
       <div class="mb-3">
         <label for="annee" class="form-label">annee</label>
-        <input type="text" class="form-control" name="annee" id="annee" aria-describedby="emailHelp">
+        <input type="text" class="form-control" name="annee" id="annee" aria-describedby="emailHelp"
+        value="{{ $vehicule->annee }}">
       </div>
       <div class="mb-3">
         <label for="couleur" class="form-label">couleur</label>
-        <input type="text" class="form-control" name="couleur" id="couleur" aria-describedby="emailHelp">
+        <input type="text" class="form-control" name="couleur" id="couleur" aria-describedby="emailHelp"
+        value="{{ $vehicule->couleur }}">
       </div>
       <div class="mb-3">
         <label for="modele" class="form-label">modele</label>
-        <input type="text" class="form-control" name="modele"  id="exampleInput" aria-describedby="emailHelp">
+        <input type="text" class="form-control" name="modele"  id="exampleInput" aria-describedby="emailHelp"
+        value="{{ $vehicule->modele }}">
       </div>
       <div class="mb-3">
         <label for="kilometrage" class="form-label">kilometrage</label>
-        <input type="text" class="form-control" name="kilometrage" id="kilometrage" aria-describedby="emailHelp">
+        <input type="text" class="form-control" name="kilometrage" id="kilometrage" aria-describedby="emailHelp"
+        value="{{ $vehicule->kilometrage }}">
       </div>
       <div class="mb-3">
         <label for="carosserie" class="form-label">carosserie</label>
-        <input type="text" class="form-control" name="carosserie" id="carosserie" aria-describedby="emailHelp">
+        <input type="text" class="form-control" name="carosserie" id="carosserie" aria-describedby="emailHelp"
+        value="{{ $vehicule->carosserie }}">
       </div>
       <div class="mb-3">
         <label for="energie" class="form-label">energie</label>
-        <input type="text" class="form-control" name="energie" id="energie" aria-describedby="emailHelp">
+        <input type="text" class="form-control" name="energie" id="energie" aria-describedby="emailHelp"
+        value="{{ $vehicule->energie }}">
       </div>
       <div class="mb-3">
         <label for="boite" class="form-label">boite</label>
-        <input type="text" class="form-control" name="boite" id="boite" aria-describedby="emailHelp">
+        <input type="text" class="form-control" name="boite" id="boite" aria-describedby="emailHelp"
+        value="{{ $vehicule->boite }}">
       </div>
 
 
